@@ -1,5 +1,3 @@
-import 'dart:ui_web';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mini_nft_marketplace/core/resources/color_manager.dart';
@@ -36,18 +34,52 @@ class OnBoardingScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               Center(
-                child: Column(
-                  children: [
-                    Text(
-                      StringManager.titleOnBoardingPage,
-                      style: TextStyle(
-                        color: ColorManager.white,
-                        fontSize: FontSize.fs36_04.sp,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: FontManager.sfPro,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 70.h),
+                  child: Column(
+                    children: [
+                      Text(
+                        StringManager.titleOnBoardingPage,
+                        style: TextStyle(
+                          color: ColorManager.white,
+                          fontSize: FontSize.fs36_04.sp,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: FontManager.sfPro,
+                        ),
                       ),
-                    ),
-                  ],
+                      Spacer(),
+                      ClipRRect(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.5),
+                            borderRadius: BorderRadius.circular(23),
+                          ),
+                          width: 306.31.w,
+                          height: 191.02.h,
+                          child: Column(
+                            children: [
+                              Text(
+                                'Explore and Mint NFTs',
+                                style: TextStyle(color: ColorManager.white),
+                              ),
+                              Text(
+                                'You can buy and sell the NFTs of the best \nartists in the world.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(color: ColorManager.grey),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Get started now',
+                                  style: TextStyle(color: ColorManager.white),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
